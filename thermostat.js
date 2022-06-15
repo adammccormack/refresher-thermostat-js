@@ -2,8 +2,9 @@ class Thermostat {
 
   constructor(temperature) {
     this.TEMPERATURE = 20;
-    this.MAX_TEMPERATURE = 25;
+    this.MAX_TEMPERATURE = 24;
     this.POWER_SAVE = false;
+
   }
 
   getTemperature() {
@@ -11,7 +12,7 @@ class Thermostat {
   }
   
   up() {
-    if (this.POWER_SAVE === true && this.TEMPERATURE > 24) {
+    if (this.POWER_SAVE === true && this.TEMPERATURE > this.MAX_TEMPERATURE) {
       return;
     }
     this.TEMPERATURE ++;
@@ -28,9 +29,7 @@ class Thermostat {
       this.POWER_SAVE = false;
     }
   }
-  
-  // if PSM === true;
-  // this.temperature <= 25;
+
 }
 
 module.exports = Thermostat;
