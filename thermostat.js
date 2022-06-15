@@ -6,6 +6,8 @@ class Thermostat {
     this.POWER_SAVE_MAX_TEMPERATURE = 24;
     this.MAX_TEMPERATURE = 31;
     this.MIN_TEMPERATURE = 10;
+    this.LOW_USAGE = 18;
+    this.MEDIUM_USAGE = 25;
     this.POWER_SAVE = false;
 
   }
@@ -44,9 +46,9 @@ class Thermostat {
   }
 
   checkEnergyUsage() {
-    if (this.TEMPERATURE < 18) {
+    if (this.TEMPERATURE < this.LOW_USAGE) {
       return 'Low usage';
-    } else if (this.TEMPERATURE <= 25) {
+    } else if (this.TEMPERATURE <= this.MEDIUM_USAGE) {
       return 'Medium usage';
     } else {
       return 'The temperature is TOO DAMN HIGHHHHHHHHHH';
