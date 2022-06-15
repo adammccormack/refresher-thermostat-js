@@ -1,6 +1,3 @@
-
-
-
 # Spec #
 ```
 The Thermostat starts with an initial temperature of 20 degrees
